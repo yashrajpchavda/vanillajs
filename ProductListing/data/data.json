@@ -1,0 +1,24 @@
+{
+    "header": {
+        "success": true
+    },
+    "data": [
+        {
+            "name": "Yashraj",
+            "location": "Ahmedabad, India",
+            "imageUrl": "http://lorempixel.com/100/100/animals"
+        }, {
+            "name": "Andrew",
+            "location": "Gandhinagar, India",
+            "imageUrl": "http://lorempixel.com/100/100/animals"
+        }, {
+            "name": "Sally",
+            "location": "Ontario, Canada",
+            "imageUrl": "http://lorempixel.com/100/100/animals"
+        }, {
+            "name": "Rose",
+            "location": "Seatle, US",
+            "imageUrl": "http://lorempixel.com/100/100/animals"
+        }
+    ]
+}

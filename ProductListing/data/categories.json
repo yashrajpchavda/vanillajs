@@ -1,0 +1,23 @@
+{
+    "header": {
+        "success": true
+    },
+    "data": [
+        {
+            "value": 1,
+            "text": "HR"
+        }, {
+            "value": 2,
+            "text": "Finanace"
+        }, {
+            "value": 3,
+            "text": "Java"
+        }, {
+            "value": 4,
+            "text": "QA"
+        }, {
+            "value": 5,
+            "text": "Database"
+        }
+    ]
+}

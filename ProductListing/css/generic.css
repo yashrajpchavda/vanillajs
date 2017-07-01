@@ -1,0 +1,65 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+	padding: 10px;
+}
+
+.align-left {
+	text-align: left;
+}
+
+
+/**********************************************************************************************************************/
+
+.emp-cat-con {
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cat-list {
+	padding: 2px;
+}
+
+.employee-list {
+	background: lavender;
+	padding: 20px 5px;
+	border: 1px solid royalblue;
+	border-radius: 5px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.employee {
+	list-style: none;
+	width: 100%;
+}
+
+.employee + .employee {
+	padding-top: 5px;
+}
+
+.clearfix:after {
+	content: ' ';
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+.employee-photo {
+	float: left;
+	padding: 0 5px 5px 0;
+}
+
+@media all and ( min-width: 500px ) {
+	.employee {
+		float: left;
+		width: 30%;
+	}
+}
