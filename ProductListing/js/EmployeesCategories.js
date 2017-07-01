@@ -35,7 +35,7 @@
 
     EmployeeCategoriesList.prototype.renderItems = function( clearItems ) {
 
-        if ( clearItems ) { this.clearItemsOfEl() }
+        if ( clearItems ) { this.clearItemsOfEl(); }
 
         let docFrag = document.createDocumentFragment();
 
