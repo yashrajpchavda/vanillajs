@@ -29,7 +29,7 @@
             const siteName = form.querySelector( '#siteName' ).value;
             const siteUrl = form.querySelector( '#siteUrl' ).value;
 
-            this.saveData( siteName, siteUrl );
+            this.saveData( { siteName, siteUrl } );
 
             form.reset();
 
@@ -37,7 +37,7 @@
             
         }
 
-        saveData( name, url ) {
+        saveData( { name, url } ) {
 
             let bookmarks = localStorage.getItem( 'bookmarks' );
 

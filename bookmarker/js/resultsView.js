@@ -83,14 +83,14 @@
 
         }
 
-        getWrapperForItem( item ) {
+        getWrapperForItem( { name, url } ) {
             let wrapper = document.createElement( 'div' );
             wrapper.className = 'well';
-            wrapper.innerHTML = this.getItemHtml( item.name, item.url );
+            wrapper.innerHTML = this.getItemHtml( { name, url } );
             return wrapper;
         }
 
-        getItemHtml( name, url ) {
+        getItemHtml( { name, url } ) {
             return this.compiltedItemTemplate( { name, url } );
         }
 
