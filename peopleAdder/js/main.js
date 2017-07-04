@@ -7,10 +7,10 @@
         people: [ 'James', 'Anderson' ]
     } );
 
+    App.events.on( 'peopleChanged', peopleChanged );
+
     function peopleChanged( people ) {
         console.log( people );
     }
-
-    App.events.on( 'peopleChanged', peopleChanged );
 
 } )( App, $, window );
