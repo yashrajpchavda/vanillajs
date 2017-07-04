@@ -7,7 +7,7 @@
     const initializeAndRenderCategoriesList = () => {
         categoriesList = new App.EmployeeCategoriesList( '/data/categories.json', 
             document.querySelector( '.js-cat-list' ),
-            onChangeCallback = function( selectedValue ) {
+            function( selectedValue ) {
                 employeeList.refreshItems( selectedValue );
             } );
 
