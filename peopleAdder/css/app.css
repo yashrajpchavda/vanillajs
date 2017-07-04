@@ -1,0 +1,29 @@
+/** INCLUDE CSS RESET **/
+
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Trebuchet MS', 'Arial', sans-serif, serif;
+    background-color: lightgrey;
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#addedPeopleList {
+    list-style-type: none;
+}
+
+#addedPeopleList li {
+    background-color: lightsteelblue;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.del-item {
+    cursor: pointer;
+}

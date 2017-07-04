@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>People Adder</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+    </head>
+
+    <body>
+        <div id="app" class="container">
+            <div id="peopleAdder">
+                <h2>Add People</h2>
+                <form id="addForm">
+                    <input type="text" placeholder="Enter name..." id="name" />
+                    <input type="button" id="addBtn" value="Add" />
+                </form>
+                <ul id="addedPeopleList">
+                    
+                </ul>
+            </div>
+        </div> 
+        <script type="text/template" id="peopleListTemplate">
+            <% _.each( people, function( item ) { %>
+                <li>
+                    <span><%= item %></span>
+                    <i class="del-item">X</i>
+                </li>
+            <% } ); %>
+        </script>
+
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+        <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
+        type="text/javascript"></script>
+
+        <script type="text/javascript"> App = {}; </script>
+        <script src="js/emitter.js" type="text/javascript"></script>
+        <script src="js/peopleAdder.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+    </body>
+</html>
