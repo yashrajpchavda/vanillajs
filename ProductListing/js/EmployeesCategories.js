@@ -1,7 +1,6 @@
 ( ( App, Global ) => {
 
-    let EmployeeCategoriesList = function EmployeeCategoriesList( url, container, onChangeCallback ) {
-        this.url = url;
+    let EmployeeCategoriesList = function EmployeeCategoriesList( { container, onChangeCallback } ) {
         this.el = container;
         this.employeeCategories = [];
         this.onChangeCallback = onChangeCallback;
@@ -9,28 +8,17 @@
     }
 
     EmployeeCategoriesList.prototype.fetchCategories = function() {
-        return new Promise( ( resolve, reject ) => {
 
-            let xhr = new XMLHttpRequest();
+        const promise = App.services.loadCategories();
 
-            xhr.open( 'GET', this.url, true );
-            xhr.dataType = 'json';
-
-            xhr.onload = () => {
-                if ( xhr.readyState === XMLHttpRequest.DONE ) {
-                    if ( xhr.status === 200 ) {
-                        const parsedData = JSON.parse( xhr.responseText );
-                        this.employeeCategories = parsedData.data;
-                        resolve( parsedData );
-                    } else {
-                        reject( xhr.responseText );
-                    }
-                }
-            }
-
-            xhr.send();
-
+        promise.then( ( response ) => {
+            this.employeeCategories = response.data;
+            this.renderItems();
+            return promise;
         } );
+        
+        return promise;
+
     }
 
     EmployeeCategoriesList.prototype.renderItems = function( clearItems ) {

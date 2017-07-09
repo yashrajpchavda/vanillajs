@@ -5,15 +5,15 @@
     let categoriesList;
 
     const initializeAndRenderCategoriesList = () => {
-        categoriesList = new App.EmployeeCategoriesList( '/data/categories.json', 
-            document.querySelector( '.js-cat-list' ),
-            function( selectedValue ) {
-                employeeList.refreshItems( selectedValue );
-            } );
+        const container = document.querySelector( '.js-cat-list' );
+        const onChangeCallback = ( selectedValue ) => {
+            employeeList.refreshItems( selectedValue );
+        };
+
+        categoriesList = new App.EmployeeCategoriesList( { container, onChangeCallback } );
 
         categoriesList.fetchCategories()
             .then( ( response ) => {
-                categoriesList.renderItems();
                 initializeAndRenderEmployeeList();
             } );
     }
